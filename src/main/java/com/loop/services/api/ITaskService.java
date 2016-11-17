@@ -1,6 +1,6 @@
 package com.loop.services.api;
 
-import org.springframework.scheduling.config.Task;
+import java.util.List;
 
 import com.loop.dao.entities.TaskEntity;
 
@@ -10,5 +10,14 @@ import com.loop.dao.entities.TaskEntity;
  */
 public interface ITaskService {
 
-    TaskEntity addTask(Task task);
+    TaskEntity addTask(TaskEntity task);
+
+    TaskEntity updateTask(TaskEntity task);
+
+    List<TaskEntity> getTask();
+
+    TaskEntity getTaskById(Long id);
+
+    void deleteTask(Long id);
+
 }

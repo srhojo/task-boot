@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: taskBoot
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: Hojo
+Built-By: Javier
 Implementation-Vendor-Id: com.loop
-Build-Jdk: 1.8.0_11
+Build-Jdk: 1.8.0_101
 Implementation-URL: http://projects.spring.io/spring-boot/task-boot/
 Created-By: Maven Integration for Eclipse
 Implementation-Vendor: Pivotal Software, Inc.

@@ -22,7 +22,7 @@ public class SubTaskEntity implements Serializable {
 
     @Id
     @GeneratedValue
-    private String id;
+    private Long id;
 
     @Column(name = "name", length = 150, nullable = false)
     private String name;
@@ -43,7 +43,7 @@ public class SubTaskEntity implements Serializable {
     /**
      * @return the id
      */
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
@@ -51,7 +51,7 @@ public class SubTaskEntity implements Serializable {
      * @param id
      *            the id to set
      */
-    public void setId(final String id) {
+    public void setId(final Long id) {
         this.id = id;
     }
 

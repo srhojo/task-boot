@@ -1,35 +1,30 @@
-package com.loop.dao.entities;
+package com.loop.controllers.beans;
 
 import java.io.Serializable;
 import java.util.List;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.NotEmpty;
 
 /**
- * @author Hojo
+ * @author Javier
  *
  */
-@Entity
-public class TaskEntity implements Serializable {
+public class TaskBean implements Serializable {
 
-    private static final long serialVersionUID = 3859976736004881856L;
+    private static final long serialVersionUID = -1806154691303967138L;
 
-    @Id
-    @GeneratedValue
     private Long id;
 
-    @Column(name = "name", length = 150, nullable = false)
+    @NotEmpty
+    @Size(max = 150)
     private String name;
 
-    @Column(name = "description", length = 500, nullable = false)
+    @Size(max = 500)
     private String description;
 
-    @OneToMany(mappedBy = "parentTask", targetEntity = SubTaskEntity.class)
-    private List<SubTaskEntity> subtasks;
+    private List<SubTaskBean> subtasks;
 
     /**
      * @return the id
@@ -79,7 +74,7 @@ public class TaskEntity implements Serializable {
     /**
      * @return the subtasks
      */
-    public List<SubTaskEntity> getSubtasks() {
+    public List<SubTaskBean> getSubtasks() {
         return subtasks;
     }
 
@@ -87,7 +82,7 @@ public class TaskEntity implements Serializable {
      * @param subtasks
      *            the subtasks to set
      */
-    public void setSubtasks(final List<SubTaskEntity> subtasks) {
+    public void setSubtasks(final List<SubTaskBean> subtasks) {
         this.subtasks = subtasks;
     }
 
